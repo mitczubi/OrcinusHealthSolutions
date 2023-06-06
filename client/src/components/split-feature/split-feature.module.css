@@ -1,0 +1,21 @@
+.profile-row {
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-card {
+    margin-bottom: 20px;
+}
+
+.profile-picture {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-blurb {
+    margin-top: 10px;
+}

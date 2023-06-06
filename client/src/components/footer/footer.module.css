@@ -1,0 +1,38 @@
+.footer {
+    background-color: #212529;
+    padding: 20px 0;
+    color: #ffffff;
+}
+
+.footer-brand {
+    margin: auto;
+    text-align: left;
+}
+
+.footer-links {
+    margin: auto;
+}
+
+.footer-links-title {
+    text-align: left;
+    font-weight: bold;
+}
+
+.footer-links-list {
+    list-style-type: none;
+    padding-left: 0;
+    text-align: left;
+}
+
+.footer-links-list li {
+    margin-bottom: 5px;
+}
+
+.footer-links-list a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.footer-links-list:hover {
+    text-decoration: underline;
+}
