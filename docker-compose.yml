@@ -16,6 +16,8 @@ services:
     build:
       context: "./server"
       dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
     volumes:
       - /app/node_modules
       - ./server:/app
