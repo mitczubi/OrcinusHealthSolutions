@@ -33,6 +33,6 @@
     color: #ffffff;
 }
 
-.footer-links-list:hover {
+.footer-links-list a:hover {
     text-decoration: underline;
 }
