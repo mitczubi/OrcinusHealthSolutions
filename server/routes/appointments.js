@@ -37,22 +37,22 @@ router.delete("/:id", async (req, res) => {
 })
 
 // READ
-router.get("/:id", async (req, res) => {
+router.get("/:id", async (req, res, next) => {
     try {
         const apt = await Appointment.findById(req.params.id);
         res.status(200).json(apt)
     } catch(err) {
-        res.status(500).json(err);
+        next(err)
     }
 })
 
 // READ ALL
-router.get("/", async (req, res) => {
+router.get("/", async (req, res, next) => {
     try {
         const apts = await Appointment.find();
         res.status(200).json(apts)
     } catch(err) {
-        res.status(500).json(err);
+        next(err)
     }
 })
 
