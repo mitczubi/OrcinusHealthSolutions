@@ -9,3 +9,13 @@ services:
       dockerfile: Dockerfile
     ports:
       - "3000:3000"
+
+  server:
+    container_name: server-c
+    image: server-i
+    build:
+      context: "./server"
+      dockerfile: Dockerfile
+    volumes:
+      - /app/node_modules
+      - ./server:/app

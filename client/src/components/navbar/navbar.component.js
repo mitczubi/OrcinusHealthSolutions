@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container, Navbar, Nav, Button} from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import { LinkContainer } from 'react-router-bootstrap'
 
 const Navigation = () => {
@@ -14,8 +13,8 @@ const Navigation = () => {
             to: '/coaching',
         },
         {
-            name: "Consulting",
-            to: '/consulting',
+            name: "About",
+            to: '/about',
         },
     ]
 

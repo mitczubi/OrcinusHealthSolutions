@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.css';
-import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Homepage from './pages/Homepage';
 import CoachingPage from './pages/CoachingPage';
-import ConsultingPage from './pages/ConsultingPage'
+import About from './pages/AboutPage';
 
 const router = createBrowserRouter([
   {
@@ -16,8 +16,8 @@ const router = createBrowserRouter([
     element: <CoachingPage />
   },
   {
-    path: '/consulting',
-    element: <ConsultingPage />,
+    path: '/About',
+    element: <About />,
   },
 ]);
 

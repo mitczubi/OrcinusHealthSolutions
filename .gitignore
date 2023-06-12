@@ -3,8 +3,13 @@
 /client/.pnp
 /client.pnp.js
 
+/server/node_modules
+/server/.pnp
+/server.pnp.js
+
 # testing
 /client/coverage
+/server/coverage
 
 # production
 /client/build

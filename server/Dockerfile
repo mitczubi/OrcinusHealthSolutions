@@ -1,7 +1,9 @@
-FROM node
+FROM node:alpine
+
 WORKDIR /app
+
 COPY package.json .
 COPY package-lock.json .
-COPY ./ ./
+COPY . .
 RUN npm i
-CMD [ "npm", "run", "start" ]
+CMD ["npm", "run", "start"]
