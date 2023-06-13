@@ -1,7 +1,8 @@
 .feature-parent {
-    background-color: bisque;
+    background-color: #9d8da5;
     background-size: cover;
     background-position: center;
+    color: whitesmoke;
 }
 
 .feature-row {
