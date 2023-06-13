@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Navbar, Nav, Button} from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap'
+import styles from './navbar.module.css';
 
 const Navigation = () => {
     const links = [
@@ -19,7 +20,7 @@ const Navigation = () => {
     ]
 
     return (
-        <Navbar bg="dark" variant="dark" sticky="top" expand="lg" className="navigation">
+        <Navbar sticky="top" expand="lg" className={`navigation ${styles['navbar']}`}>
             <Container>
                 <LinkContainer to="/">
                     <Navbar.Brand href="#" className="">Orcinus Health Solutions</Navbar.Brand>
@@ -48,7 +49,7 @@ const Navigation = () => {
                         ))}
                     </Nav>
                     <Nav className='ps-2'>
-                        <Button variant="light">Contact</Button>
+                        <Button>Contact</Button>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

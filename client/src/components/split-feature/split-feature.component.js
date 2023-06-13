@@ -4,40 +4,43 @@ import styles from './split-feature.module.css'
 
 const ProfileSplitFeature = () => {
     return (
-        <Container>
-            <Row className={styles['profile-row']}>
-                <Col md={6} className="text-center">
-                    <div className={styles["profile-card"]}>
-                        <Image
-                            src="https://picsum.photos/id/237/350/"
-                            alt="Kristen Woods"
-                            roundedCircle
-                            className={styles["profile-picture"]}
-                        />
-                        <p className={styles["profile-blurb"]}>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                            eget.
-                        </p>
-                    </div>
-                </Col>
-                <Col md={6} className="text-center">
-                    <div className={styles["profile-card"]}>
-                        <Image
-                            src="https://picsum.photos/id/433/350"
-                            alt="Paul Woods"
-                            roundedCircle
-                            className={styles["profile-picture"]}
-                        />
-                        <p className={styles["profile-blurb"]}>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                            eget.
-                        </p>
-                    </div>
-                </Col>
-            </Row>
-        </Container>
+        <div className={styles['split-feature']}>
+            <Container>
+                <Row className={styles['profile-row']}>
+                    <Col md={6} className="text-center">
+                        <div className={styles["profile-card"]}>
+                            <Image
+                                src="client/public/media/photo_kristen.JPG"
+                                alt="Kristen Woods"
+                                roundedCircle
+                                className={styles["profile-picture"]}
+                            />
+                            <p className={styles["profile-blurb"]}>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+                                eget.
+                            </p>
+                        </div>
+                    </Col>
+                    <Col md={6} className="text-center">
+                        <div className={styles["profile-card"]}>
+                            <Image
+                                src="https://drive.google.com/file/d/1sLCSaVYGRuZUHS6au5WZ8yxdDnfs8ss-/view?usp=drive_link"
+                                alt="Paul Woods"
+                                roundedCircle
+                                className={styles["profile-picture"]}
+                            />
+                            <p className={styles["profile-blurb"]}>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+                                eget.
+                            </p>
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+        </div>
+        
     )
 }
 

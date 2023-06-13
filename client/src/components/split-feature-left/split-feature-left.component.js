@@ -5,7 +5,7 @@ const SplitFeatureLeft = (props) => {
     const { imageUrl, title, text } = props;
 
     return (
-        <div className="m-2">
+        <div style={{backgroundColor: "#779eb4"}}>
             <Container>
                 <Row>
                     <Col md={6} className="text-center">

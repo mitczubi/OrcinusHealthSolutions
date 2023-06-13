@@ -9,14 +9,17 @@ const AppointmentSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    time: {
+    start: {
         type: Date,
         required: true
     },
-    summary: {
+    description: {
         type: String,
         required: true
-    }
+    },
+    timezone: {
+        type: String
+    },
 })
 
 export default mongoose.model("Appointment", AppointmentSchema);
