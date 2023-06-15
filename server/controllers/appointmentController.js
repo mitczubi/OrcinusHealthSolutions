@@ -3,11 +3,10 @@ import { addCalendarEvent } from "../utils/sendCalendarEvent.js";
 
 export const createAppointment = async (req, res, next) => {
     const newApt = new Appointment(req.body);
-
-    addCalendarEvent(newApt);
     
     try {
         const savedApt = await newApt.save();
+        addCalendarEvent(newApt);
         res.status(200).json(savedApt)
     } catch(err) {
         next(err)

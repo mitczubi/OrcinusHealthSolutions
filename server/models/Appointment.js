@@ -18,7 +18,8 @@ const AppointmentSchema = new mongoose.Schema({
         required: true
     },
     timezone: {
-        type: String
+        type: String,
+        default: "America/Chicago"
     },
 })
 

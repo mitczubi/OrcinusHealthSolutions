@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
+import cookieParser from "cookie-parser";
 import authRoute from "./routes/auth.js"
 import usersRoute from "./routes/users.js"
 import appointmentsRoute from "./routes/appointments.js"
@@ -21,10 +22,11 @@ mongoose.connection.on("disconnected", () => {
     console.log("mongoDB disconnected")
 })
 
+// middlewares
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
+app.use(cookieParser());
 
-// middlewares
 app.use("/api/auth", authRoute)
 app.use("/api/users", usersRoute)
 app.use("/api/appointments", appointmentsRoute)
