@@ -47,7 +47,13 @@ const Navigation = () => {
             ))}
           </Nav>
           <Nav className="ps-2">
-            <Button>Contact</Button>
+            <Nav.Item>
+              <LinkContainer to="/contact">
+                <Nav.Link>
+                  <Button className="btn-primary">Request Appointment</Button>
+                </Nav.Link>
+              </LinkContainer>
+            </Nav.Item>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -10,3 +10,8 @@
     height: 90pt;
     z-index: 2;
 }
+
+.homepageHero {
+    background: #e7dcd6;
+    position: relative;
+}

@@ -28,5 +28,6 @@
 
 /server/.env
 /server/keys.json
+/server/logs
 
 .vscode

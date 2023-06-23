@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import axios from "axios";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -17,7 +18,17 @@ const ContactForm = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(formData);
+    const appointmentData = {
+      name: formData.name,
+      email: formData.email,
+      start: formData.start,
+      description: formData.description,
+    };
+    axios
+      .post("http://localhost:3001/api/appointments", appointmentData)
+      .then((response) => {
+        console.log(response.status, response.data);
+      });
   };
 
   const getDates = (startDate, endDate) => {
