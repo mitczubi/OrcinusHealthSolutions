@@ -20,6 +20,7 @@
 /client/.env.development.local
 /client/.env.test.local
 /client/.env.production.local
+/client/.eslintrc
 
 /client/npm-debug.log*
 /client/yarn-debug.log*
@@ -27,3 +28,5 @@
 
 /server/.env
 /server/keys.json
+
+.vscode

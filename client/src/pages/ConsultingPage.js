@@ -1,10 +1,14 @@
 import React from "react";
-import Navbar from '../components/navbar/navbar.component';
+import Navbar from "../components/navbar/navbar.component";
+import ContactForm from "../components/contact-form/contact-form.component";
 
-function CoachingPage() {
-    return (
-        <Navbar />
-    )
+function ConsultingPage() {
+  return (
+    <div>
+      <Navbar />
+      <ContactForm />
+    </div>
+  );
 }
 
-export default CoachingPage;
+export default ConsultingPage;

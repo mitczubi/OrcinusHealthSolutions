@@ -1,26 +1,26 @@
 import mongoose from "mongoose";
 
 const AppointmentSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: true
-    },
-    email: {
-        type: String,
-        required: true
-    },
-    start: {
-        type: Date,
-        required: true
-    },
-    description: {
-        type: String,
-        required: true
-    },
-    timezone: {
-        type: String,
-        default: "America/Chicago"
-    },
-})
+  name: {
+    type: String,
+    required: true,
+  },
+  email: {
+    type: String,
+    required: true,
+  },
+  start: {
+    type: Date,
+    required: true,
+  },
+  description: {
+    type: String,
+    required: true,
+  },
+  timezone: {
+    type: String,
+    default: "America/Chicago",
+  },
+});
 
 export default mongoose.model("Appointment", AppointmentSchema);

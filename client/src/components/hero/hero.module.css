@@ -1,16 +1,10 @@
 .hero {
-    background-color: #bebdbf;
-    background-size: cover;
     background-position: center;
     height: 700px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-}
-
-.hero .container {
-    color: #ffffff;
 }
 
 .hero-title {
