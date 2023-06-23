@@ -1,4 +1,5 @@
 import { google } from "googleapis";
+import logger from "../utils/logger.js";
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -80,11 +81,11 @@ export const addCalendarEvent = async (data) => {
       },
       function (error, response) {
         if (error) {
-          console.log("Something went wrong: " + error);
+          logger.log("info", "Something went wrong: ", error);
           return;
         }
-        console.log("Event created successfully.");
-        console.log("Event details: ", response.data);
+        logger.log("info", "Event created successfully.");
+        logger.log("info", "Event details: ", response.data);
       }
     );
   });

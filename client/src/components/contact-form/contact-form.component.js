@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import axios from "axios";
+import { trackPromise } from "react-promise-tracker";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -24,11 +25,13 @@ const ContactForm = () => {
       start: formData.start,
       description: formData.description,
     };
-    axios
-      .post("http://localhost:3001/api/appointments", appointmentData)
-      .then((response) => {
-        console.log(response.status, response.data);
-      });
+    trackPromise(
+      axios
+        .post("http://localhost:3001/api/appointments", appointmentData)
+        .then((response) => {
+          console.log(response.status, response.data);
+        })
+    );
   };
 
   const getDates = (startDate, endDate) => {

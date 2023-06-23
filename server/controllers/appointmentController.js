@@ -2,12 +2,15 @@ import logger from "../utils/logger.js";
 import Appointment from "../models/Appointment.js";
 import { addCalendarEvent } from "../utils/sendCalendarEvent.js";
 
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
 export const createAppointment = async (req, res, next) => {
   logger.log("info", "Request received: ", req);
   const newApt = new Appointment(req.body);
 
   try {
     const savedApt = await newApt.save();
+    await sleep(5000);
     addCalendarEvent(newApt);
     res.status(200).json(savedApt);
   } catch (err) {
