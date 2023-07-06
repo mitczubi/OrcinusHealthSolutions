@@ -31,7 +31,7 @@ const Navigation = () => {
     >
       <Container>
         <LinkContainer to="/">
-          <Navbar.Brand href="#" className="">
+          <Navbar.Brand href="#" className={styles["navbar-text-custom"]}>
             Orcinus Health Solutions
           </Navbar.Brand>
         </LinkContainer>
@@ -41,7 +41,9 @@ const Navigation = () => {
             {links.map((link, index) => (
               <Nav.Item key={index}>
                 <LinkContainer to={link.to}>
-                  <Nav.Link>{link.name}</Nav.Link>
+                  <Nav.Link className={styles["navbar-text-custom"]}>
+                    {link.name}
+                  </Nav.Link>
                 </LinkContainer>
               </Nav.Item>
             ))}

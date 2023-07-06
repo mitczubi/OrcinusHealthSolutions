@@ -8,7 +8,9 @@ const Hero = () => {
       <Container>
         <Row>
           <Col className="text-center">
-            <h1 className={styles["hero-title"]}>Orcinus Health Solutions</h1>
+            <h1 className={styles["hero-title"]}>
+              Orcinus Executive Solutions
+            </h1>
             <p className={styles["hero-blurb"]}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
               dapibus tristique lacinia.

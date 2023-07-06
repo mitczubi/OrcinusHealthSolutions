@@ -1,5 +1,6 @@
 # dependencies
 /client/node_modules
+/client/target
 /client/.pnp
 /client.pnp.js
 
@@ -26,8 +27,11 @@
 /client/yarn-debug.log*
 /client/yarn-error.log*
 
-/server/.env
+/server/.env.development
+/server/.env.production
 /server/keys.json
 /server/logs
 
 .vscode
+
+build.log

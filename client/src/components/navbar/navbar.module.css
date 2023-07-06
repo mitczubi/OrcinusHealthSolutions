@@ -1,5 +1,8 @@
 .navbar {
-    background-color: whitesmoke;
-    color: #546a76;
+    background-color: #546a76;
     font-weight: 600;
+}
+
+.navbar-text-custom {
+    color: #c8c2c0;
 }

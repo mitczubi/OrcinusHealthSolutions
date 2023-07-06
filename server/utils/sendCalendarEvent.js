@@ -2,7 +2,7 @@ import { google } from "googleapis";
 import logger from "../utils/logger.js";
 import dotenv from "dotenv";
 
-dotenv.config();
+dotenv.config({ path: `./.env.${process.env.NODE_ENV}` });
 
 const GOOGLE_PRIVATE_KEY = process.env.private_key;
 const GOOGLE_CLIENT_EMAIL = process.env.client_email;
@@ -50,7 +50,7 @@ const createEvent = (data) => {
 
   return {
     summary: summary,
-    description: data.description,
+    description: data.description + "/n" + data.email,
     start: {
       dateTime: start,
     },

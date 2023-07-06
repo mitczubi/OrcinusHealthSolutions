@@ -1,17 +1,19 @@
-.homepageHero::before {
+/* .homepageHero::before {
     content: "";
     background: linear-gradient(45deg, rgba(119,158,180,.64), hsla(0, 0%, 100%, 0) 100%);
     background-position: 0% 50%;
     position: absolute;
     left: 0;
     bottom: 30px;
-    /* transform: skewY(6deg); */
+    transform: skewY(6deg);
     width: 100%;
     height: 90pt;
     z-index: 2;
-}
+} */
 
 .homepageHero {
-    background: #e7dcd6;
+    background-image: url("../../../public/media/orcas-resized.gif");
+    background-size: cover;
+    background-position: 50%;
     position: relative;
 }

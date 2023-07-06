@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Image, Button } from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
 import styles from "./three-square-feature.module.css";
 
 const ThreeSquareFeature = () => {
@@ -31,9 +32,11 @@ const ThreeSquareFeature = () => {
                 Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
                 eget.
               </p>
-              <Button variant="dark" className="feature-learn-more">
-                Learn More
-              </Button>
+              <LinkContainer to="/coaching">
+                <Button variant="dark" className="feature-learn-more">
+                  Learn More
+                </Button>
+              </LinkContainer>
             </div>
           </Col>
           <Col md={4} className="text-center">
@@ -48,9 +51,11 @@ const ThreeSquareFeature = () => {
                 Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
                 eget.
               </p>
-              <Button variant="dark" className="feature-learn-more">
-                Learn More
-              </Button>
+              <LinkContainer to="/consulting">
+                <Button variant="dark" className="feature-learn-more">
+                  Learn More
+                </Button>
+              </LinkContainer>
             </div>
           </Col>
           <Col md={4} className="text-center">
@@ -65,9 +70,11 @@ const ThreeSquareFeature = () => {
                 Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
                 eget.
               </p>
-              <Button variant="dark" className="feature-learn-more">
-                Learn More
-              </Button>
+              <LinkContainer to="/about">
+                <Button variant="dark" className="feature-learn-more">
+                  Learn More
+                </Button>
+              </LinkContainer>
             </div>
           </Col>
         </Row>

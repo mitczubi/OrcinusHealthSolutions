@@ -10,7 +10,7 @@ const ProfileSplitFeature = () => {
           <Col md={6} className="text-center">
             <div className={styles["profile-card"]}>
               <Image
-                src="/media/photo_kristen.JPG"
+                src="/media/photo_kristen.png"
                 alt="Kristen Woods"
                 roundedCircle
                 className={styles["profile-picture"]}

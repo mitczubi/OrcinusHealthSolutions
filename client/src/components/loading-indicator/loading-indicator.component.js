@@ -1,6 +1,6 @@
 import React from "react";
 import { usePromiseTracker } from "react-promise-tracker";
-import { Dna } from "react-loader-spinner";
+import { MutatingDots } from "react-loader-spinner";
 
 const LoadingIndicator = (props) => {
   const { promiseInProgress } = usePromiseTracker();
@@ -16,7 +16,13 @@ const LoadingIndicator = (props) => {
           alignItems: "center",
         }}
       >
-        <Dna visible={true} height="100" width="100" />
+        <MutatingDots
+          height="100"
+          width="100"
+          color="#9d8da5"
+          radius="12.5"
+          ariaLabel="dots-loading"
+        />
       </div>
     )
   );

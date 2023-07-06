@@ -3,13 +3,16 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import cookieParser from "cookie-parser";
 import cors from "cors";
+import helmet from "helmet";
+import rateLimit from "express-rate-limit";
 import authRoute from "./routes/auth.js";
 import usersRoute from "./routes/users.js";
 import appointmentsRoute from "./routes/appointments.js";
 
 const app = express();
-dotenv.config();
+dotenv.config({ path: `./.env.${process.env.NODE_ENV}` });
 
+// MongoDB Connection
 const connect = async () => {
   try {
     await mongoose.connect(process.env.MONGO);
@@ -23,10 +26,20 @@ mongoose.connection.on("disconnected", () => {
   console.log("mongoDB disconnected");
 });
 
+// Rate Limiter
+const limiter = rateLimit({
+  windowMs: 1 * 60 * 1000,
+  max: 100,
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+
 // middlewares
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
+app.use(helmet());
+app.use("/api", limiter);
 app.use(cors());
 
 app.use("/api/auth", authRoute);
@@ -44,7 +57,7 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.listen("3001", () => {
+app.listen("4000", () => {
   connect();
   console.log("Connected to backend");
 });

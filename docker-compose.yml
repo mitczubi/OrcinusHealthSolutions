@@ -1,23 +1,38 @@
-version: '3.8'
+version: "3"
+
+networks:
+  frontend:
+    name: frontend-network
 
 services:
-  client:
-    container_name: client-c
-    image: client-i
+  server:
+    container_name: node-docker
+    build:
+      context: ./server
+      dockerfile: docker-setup/nodejs/development/Dockerfile
+    networks:
+      - frontend
+    volumes:
+      - ./server:/server
+    environment:
+      - NODE_ENV=development
+    env_file:
+      - ./server/.env.development
+    ports:
+      - "4000:4000"
+
+  frontend:
+    container_name: client-docker
     build:
       context: ./client
-      dockerfile: Dockerfile
+      dockerfile: docker-setup/react/development/Dockerfile
+    networks:
+      - frontend
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ./client:/client
+    depends_on:
+      - server
     ports:
       - "3000:3000"
-
-  server:
-    container_name: server-c
-    image: server-i
-    build:
-      context: "./server"
-      dockerfile: Dockerfile
-    ports:
-      - "3001:3001"
-    volumes:
-      - /app/node_modules
-      - ./server:/app

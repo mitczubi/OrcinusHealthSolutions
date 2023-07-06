@@ -8,11 +8,13 @@
 }
 
 .hero-title {
-    font-size: 64px;
+    font-size: 100px;
     font-weight: bold;
+    color: #ffffff;
     margin-bottom: 20px;
 }
 
 .hero-blurb {
-    font-size: 20px;
+    font-size: 30px;
+    color: #ffffff;
 }
