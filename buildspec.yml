@@ -12,6 +12,7 @@ phases:
   post_build:
     commands:
       - echo Build complete on `date`
+      - docker images
       - echo Pushing the Docker image
       - docker-compose --file=docker-compose.aws.production.yml push
 artifacts:
