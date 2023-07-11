@@ -10,7 +10,9 @@ import usersRoute from "./routes/users.js";
 import appointmentsRoute from "./routes/appointments.js";
 
 const app = express();
-dotenv.config({ path: `./.env.${process.env.NODE_ENV}` });
+if (process.env.NODE_ENV === "development") {
+  dotenv.config({ path: `./.env.${process.env.NODE_ENV}` });
+}
 
 // MongoDB Connection
 const connect = async () => {
