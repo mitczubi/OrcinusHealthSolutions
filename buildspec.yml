@@ -8,7 +8,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
-      - docker-compose --file=docker-compose.aws.production.yml
+      - docker-compose --file=docker-compose.aws.production.yml build
   post_build:
     commands:
       - echo Build complete on `date`
