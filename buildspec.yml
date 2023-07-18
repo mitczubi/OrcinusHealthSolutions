@@ -16,7 +16,7 @@ phases:
       - echo Build complete on `date`
       - echo Pushing the Docker image
       - docker-compose --file=docker-compose.aws.production.yml push
-      - envsubt < "Dockerrun.aws.json.template" > "Dockerrun.aws.json"
+      - envsubst < "Dockerrun.aws.json.template" > "Dockerrun.aws.json"
 artifacts:
   files:
     - 'Dockerrun.aws.json'
