@@ -3,7 +3,7 @@
     "containerDefinitions": [
         {
             "name": "client",
-            "image": "{$AWS_ACCOUNT_ID}.dkr.ecr.{$AWS_DEFAULT_REGION}.amazonaws.com/orcinus-client-prod",
+            "image": "{$AWS_ACCOUNT_ID}.dkr.ecr.{$AWS_DEFAULT_REGION}.amazonaws.com/orcinus-client-prod:latest",
             "hostname": "client",
             "essential": true,
             "memory": 1024,
@@ -16,7 +16,7 @@
         },
         {
             "name": "server",
-            "image": "{$AWS_ACCOUNT_ID}.dkr.ecr.{$AWS_DEFAULT_REGION}.amazonaws.com/orcinus-server-prod",
+            "image": "{$AWS_ACCOUNT_ID}.dkr.ecr.{$AWS_DEFAULT_REGION}.amazonaws.com/orcinus-server-prod:latest",
             "hostname": "server",
             "essential": true,
             "memory": 512,
