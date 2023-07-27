@@ -1,8 +1,9 @@
 version: "3"
+
 services:
-  backend-prod:
+  server-prod:
     container_name: orcinus-server-prod
-    image: orcinus-server-prod
+    image: mitczubi/orcinus-server-prod
     build:
       context: ./server
       dockerfile: docker-setup/nodejs/production/Dockerfile
@@ -15,11 +16,11 @@ services:
     tty: true
     stdin_open: true
     ports:
-      - "4000"
+      - "4000:4000"
 
-  frontend-prod:
+  client-prod:
     container_name: orcinus-client-prod
-    image: orcinus-client-prod
+    image: mitczubi/orcinus-client-prod
     build:
       context: ./client
       dockerfile: docker-setup/react/production/Dockerfile
@@ -28,12 +29,13 @@ services:
     environment:
       - NODE_ENV=production
     depends_on:
-      - backend-prod
+      - server-prod
     tty: true
     stdin_open: true
     ports:
-      - "80:80"
-      - "443:443"
+      - "8080:8080"
+    sysctls:
+     - net.ipv4.ip_unprivileged_port_start=0
 
 networks:
   frontend:

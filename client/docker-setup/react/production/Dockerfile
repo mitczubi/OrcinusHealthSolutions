@@ -38,13 +38,19 @@ COPY --from=client /client/build .
 # Update the nginx config with our own config file
 COPY --from=client /client/docker-setup/nginx/orcinus.conf /etc/nginx/conf.d/
 
+RUN chown -R nginx:nginx /usr/share/nginx/html && chmod -R 755 /usr/share/nginx/html && \
+    chown -R nginx:nginx /var/cache/nginx && \
+    chown -R nginx:nginx /var/log/nginx && \
+    chown -R nginx:nginx /etc/nginx/conf.d
+
+RUN touch /var/run/nginx.pid && \
+    chown -R nginx:nginx /var/run/nginx.pid
+
+# RUN chown -R nonroot:nonroot /etc/nginx/conf.d/ /var/cache/nginx/ /var/run/
+
 EXPOSE 80
 
-RUN useradd -ms /bin/bash nonroot
-
-RUN chown -R nonroot:nonroot /etc/nginx/conf.d/ /var/cache/nginx/ /var/run/
-
-USER nonroot
+USER nginx
 
 # Containers run nginx with global directives and daemon off
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
