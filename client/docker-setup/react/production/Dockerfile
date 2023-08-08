@@ -3,15 +3,13 @@
 #
 FROM node:16-slim as client
 
-WORKDIR /client
-
 COPY package.json package-lock.json ./
 
-RUN npm install
+RUN npm install && mkdir /client && mv ./node_modules ./client
+
+WORKDIR /client
 
 COPY . .
-
-ENV NODE_ENV=production
 
 RUN npm run build
 

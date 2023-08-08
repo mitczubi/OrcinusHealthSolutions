@@ -5,21 +5,21 @@ networks:
     name: frontend-network
 
 services:
-  server:
-    container_name: node-docker
-    build:
-      context: ./server
-      dockerfile: docker-setup/nodejs/development/Dockerfile
-    networks:
-      - frontend
-    volumes:
-      - ./server:/server
-    environment:
-      - NODE_ENV=development
-    env_file:
-      - ./server/.env.development
-    ports:
-      - "4000:4000"
+  # server:
+  #   container_name: node-docker
+  #   build:
+  #     context: ./server
+  #     dockerfile: docker-setup/nodejs/development/Dockerfile
+  #   networks:
+  #     - frontend
+  #   volumes:
+  #     - ./server:/server
+  #   environment:
+  #     - NODE_ENV=development
+  #   env_file:
+  #     - ./server/.env.development
+  #   ports:
+  #     - "4000:4000"
 
   frontend:
     container_name: client-docker
@@ -32,7 +32,7 @@ services:
       - NODE_ENV=development
     volumes:
       - ./client:/client
-    depends_on:
-      - server
+    # depends_on:
+    #   - server
     ports:
       - "3000:3000"

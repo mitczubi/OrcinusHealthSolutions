@@ -1,22 +1,22 @@
 version: "3"
 
 services:
-  server-prod:
-    container_name: orcinus-server-prod
-    image: mitczubi/orcinus-server-prod
-    build:
-      context: ./server
-      dockerfile: docker-setup/nodejs/production/Dockerfile
-    networks:
-      - frontend
-    environment:
-      - NODE_ENV=production
-    env_file:
-      - ./server/.env.production
-    tty: true
-    stdin_open: true
-    ports:
-      - "4000:4000"
+  # server-prod:
+  #   container_name: orcinus-server-prod
+  #   image: mitczubi/orcinus-server-prod
+  #   build:
+  #     context: ./server
+  #     dockerfile: docker-setup/nodejs/production/Dockerfile
+  #   networks:
+  #     - frontend
+  #   environment:
+  #     - NODE_ENV=production
+  #   env_file:
+  #     - ./server/.env.production
+  #   tty: true
+  #   stdin_open: true
+  #   ports:
+  #     - "4000:4000"
 
   client-prod:
     container_name: orcinus-client-prod
@@ -28,8 +28,8 @@ services:
       - frontend
     environment:
       - NODE_ENV=production
-    depends_on:
-      - server-prod
+    # depends_on:
+    #   - server-prod
     tty: true
     stdin_open: true
     ports:
