@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Navbar, Nav, Button } from "react-bootstrap";
+import { Container, Navbar, Nav } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import styles from "./navbar.module.css";
 
@@ -47,15 +47,6 @@ const Navigation = () => {
                 </LinkContainer>
               </Nav.Item>
             ))}
-          </Nav>
-          <Nav className="ps-2">
-            <Nav.Item>
-              <LinkContainer to="/contact">
-                <Nav.Link>
-                  <Button className="btn-primary">Request Appointment</Button>
-                </Nav.Link>
-              </LinkContainer>
-            </Nav.Item>
           </Nav>
         </Navbar.Collapse>
       </Container>
