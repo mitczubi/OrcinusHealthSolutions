@@ -36,8 +36,6 @@ services:
       - "8080:8080"
     sysctls:
       - net.ipv4.ip_unprivileged_port_start=0
-    volumes:
-      - ./client:/client
 
 networks:
   frontend:

@@ -1,0 +1,26 @@
+version: "3"
+
+services:
+  client-prod:
+    container_name: orcinus-client-prod
+    image: mitczubi/orcinus-client-prod
+    build:
+      context: ./client
+      dockerfile: docker-setup/react/production/Dockerfile
+    networks:
+      - frontend
+    environment:
+      - NODE_ENV=production
+    tty: true
+    stdin_open: true
+    ports:
+      - "8080:8080"
+    sysctls:
+      - net.ipv4.ip_unprivileged_port_start=0
+    volumes:
+      - ./client:/client
+
+
+networks:
+  frontend:
+    name: orcinus-frontend-network

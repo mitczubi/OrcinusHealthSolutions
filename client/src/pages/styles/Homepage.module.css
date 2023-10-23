@@ -11,9 +11,13 @@
     z-index: 2;
 } */
 
-.homepageHero {
-    background-image: url("../../../public/media/orcas-resized.gif");
-    background-size: cover;
-    background-position: 50%;
-    position: relative;
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    height: auto;
+    width: auto;
+    z-index: -100;
 }
