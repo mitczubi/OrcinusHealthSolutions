@@ -1,0 +1,8 @@
+.navbarCustom {
+    background: rgba(67, 84, 105, 0.8);
+    border-bottom: thin solid #fff;
+}
+
+.navbarCustomText {
+    color: bisque;
+}

@@ -1,0 +1,67 @@
+.bgVideo {
+    object-fit: cover;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.viewportHeader {
+    position: relative;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.viewportHeader h1 {
+    margin-bottom: 15rem;
+}
+
+.heroText {
+    font-size: 6rem;
+    color: bisque;
+}
+
+.mainContent {
+    width: 100%;
+    color: bisque;
+}
+
+.profileRow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.profileCard {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.profilePicture {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform .7s;
+}
+
+.profilePicture:hover {
+    transform: scale(1.1);
+}
+
+.profileBlurb {
+    margin: 0 auto;
+    width: 350px;
+    padding-top: 2rem;
+}
+
+.centered {
+    margin-top: 2rem;
+    text-align: center
+}

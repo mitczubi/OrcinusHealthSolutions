@@ -8,19 +8,7 @@ const Navigation = () => {
     {
       name: "Home",
       to: "/",
-    },
-    {
-      name: "Executive Coaching",
-      to: "/coaching",
-    },
-    {
-      name: "Consulting",
-      to: "/consulting",
-    },
-    {
-      name: "About",
-      to: "/about",
-    },
+    }  
   ];
 
   return (
