@@ -13,6 +13,9 @@ export default function Footer () {
                             <Nav.Link className={styles.navCustomText} href="/">Home</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
+                            <Nav.Link className={styles.navCustomText} href="/about">About</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
                             <Nav.Link className={styles.navCustomText} href="/blog">Blog</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>

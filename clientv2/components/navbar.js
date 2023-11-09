@@ -1,4 +1,4 @@
-import {Nav, Navbar, Container } from "react-bootstrap";
+import {Nav, Navbar, NavDropdown, Container } from "react-bootstrap";
 import styles from "../styles/Navigation.module.css"
 
 export default function Navigation () {
@@ -15,10 +15,17 @@ export default function Navigation () {
                             <Nav.Link className={`${styles.navbarCustomText}`} href="/">Home</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link className={`${styles.navbarCustomText}`} href="/blog">Blog</Nav.Link>
+                            <Nav.Link className={`${styles.navbarCustomText}`} href="/about">About</Nav.Link>
                         </Nav.Item>
+                        <NavDropdown
+                            id="navigation-drop-down"
+                            menuVariant="dark" 
+                            title={<span className={`${styles.navbarCustomText}`}>Services</span>}>
+                                <NavDropdown.Item className={`${styles.navbarCustomText}`} href="/executivecoaching">Executive Coaching</NavDropdown.Item>
+                                <NavDropdown.Item className={`${styles.navbarCustomText}`} href="/consulting">Consulting</NavDropdown.Item>
+                        </NavDropdown>
                         <Nav.Item>
-                            <Nav.Link className={`${styles.navbarCustomText}`} href="/news">News</Nav.Link>
+                            <Nav.Link className={`${styles.navbarCustomText}`} href="/blog">Blog</Nav.Link>
                         </Nav.Item>
                     </Nav>
                 </Navbar.Collapse>

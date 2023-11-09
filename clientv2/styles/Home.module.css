@@ -18,11 +18,32 @@
 }
 
 .viewportHeader h1 {
-    margin-bottom: 15rem;
+    margin-bottom: 3rem;
+}
+
+.heroTitle{
+    font-size: 10rem;
+    color: bisque;
 }
 
 .heroText {
     font-size: 6rem;
+    color: bisque;
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    .heroText {
+        font-size: 3rem;
+    }    
+
+    .heroTitle {
+        font-size: 5rem;    
+    }
+}
+
+.heroSubtext {
+    font-size: 1.3rem;
     color: bisque;
 }
 
@@ -33,7 +54,7 @@
 
 .profileRow {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
     text-align: center;
 }
@@ -53,6 +74,7 @@
 
 .profilePicture:hover {
     transform: scale(1.1);
+    cursor: pointer;
 }
 
 .profileBlurb {

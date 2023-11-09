@@ -1,11 +1,29 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
+import Services from "@/components/services.js";
 import styles from "../styles/Home.module.css";
-import Navigation from "@/components/navbar";
-import Footer from "@/components/footer";
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
+
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  useEffect(() => {
+    const handleBoxScroll = () => {
+      setScrollPosition(window.scrollY);
+    }
+
+    if (typeof window !== "undefined") {
+      window.addEventListener('scroll', handleBoxScroll);
+
+      return () => {
+        window.removeEventListener('scroll', handleBoxScroll)
+      }
+    }
+  }, []);
+
+  const slideLeft = scrollPosition > 175;
+  const slideRight = scrollPosition < 100;
 
 
   useEffect(() => {
@@ -32,17 +50,22 @@ export default function Home() {
       <video autoPlay muted loop className={styles.bgVideo} style={{ filter: `blur(${blurAmount}px)` }}>
         <source src="https://orcinus.s3.amazonaws.com/orcas.webm" type="video/webm" />
       </video>
-      <Navigation />
       <header className={styles.viewportHeader} style={{ background: backgroundColor }}>
-        <h1>
-          <span className={styles.heroText}>
-            Orcinus Health Solutions
-          </span>
-        </h1>
+        <Container>
+          <h1 className="mb-0">
+            <span className={`${styles.heroTitle} pb-0 mb-0`}>Orcinus</span>
+          </h1>
+          <h1>
+            <span className={styles.heroText}>
+              Health Solutions
+            </span>
+          </h1>
+          <p className={`${styles.heroSubtext}`}>Working together to create a Healthcare world where ‘health’ and ‘care’ are the outcomes for all</p>
+        </Container>
       </header>
 
       <main className={styles.mainContent} style={{ background: backgroundColor }}>
-        <Container>
+        <Container fluid>
           <Row className={styles.profileRow}>
             <Col>
               <div className={styles.profileCard}>
@@ -54,9 +77,18 @@ export default function Home() {
                 />
                 <div className={styles.profileBlurb}>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                    eget.
+                    Kristen Woods MD MMM engages with female physician leaders 
+                    and their allies as a path to address gender equity in 
+                    healthcare leadership and to amplify physicians' voices in 
+                    improving the delivery of healthcare while reducing moral 
+                    distress. She partners with healthcare leaders to advance 
+                    their leadership skills, optimize their teams’ performance, 
+                    and build cultures that attract and retain talent in order 
+                    to make their organizations thrive. A focus on personal 
+                    wellbeing is integrated to ensure success in all aspects 
+                    of a balanced life. She is a family physician with 
+                    extensive experience in population health, change management, 
+                    and medical group operations.
                   </p>
                 </div>
               </div>
@@ -71,15 +103,22 @@ export default function Home() {
                 />
                 <div className={styles.profileBlurb}>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                    eget.
+                    Paul Woods MD MS has devoted his career to changing Healthcare 
+                    for the betterment of all, from frontline care through clinical 
+                    and executive leadership to advocacy on the policy and payment 
+                    front. He is a family physician, senior healthcare executive, 
+                    and executive coach committed to leveraging his 37 years of 
+                    experience to make healthcare better, safer, more people-centered, 
+                    and equitable.
                   </p>
                 </div>
               </div>
             </Col>
           </Row>
-          <Row>
+
+          <Services />
+
+          {/* <Row>
             <Col md={{ span: 6, offset: 3 }} className="p-5">
               <div className={styles.centered}>
                 <h1>Our Commitment</h1>
@@ -139,11 +178,9 @@ export default function Home() {
                 </div>
               </div>
             </Col>
-          </Row>
+          </Row> */}
         </Container>
       </main>
-
-      <Footer />
     </>
   )
 }
