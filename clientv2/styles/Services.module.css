@@ -11,6 +11,7 @@
 
 .featureImage {
     object-fit: cover;
+    width: 350px;
 }
 
 .featureText {
