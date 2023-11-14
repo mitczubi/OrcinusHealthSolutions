@@ -8,7 +8,7 @@ export default function Services () {
                 <Col md={6} className={`my-5 text-center`}>
                     <div className={`${styles.imageCard}`}>
                         <Image
-                        src="https://picsum.photos/id/20/370/"
+                        src="/media/coaching_executive.png"
                         className={`img-fluid ${styles.featureImage}`}
                         />
                         <h3 className={`my-3`}>
@@ -29,7 +29,7 @@ export default function Services () {
                 <Col md={6} className={`my-5 text-center`}>
                     <div className={`${styles.imageCard}`}>
                         <Image
-                        src="https://picsum.photos/id/20/370/"
+                        src="/media/consultation_1.png"
                         className={`img-fluid ${styles.featureImage}`}
                         />
                         <h3 className={`my-3`}>

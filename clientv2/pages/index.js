@@ -71,7 +71,7 @@ export default function Home() {
               <div className={styles.profileCard}>
                 <Image
                   className={styles.profilePicture}
-                  src="/media/photo_kristen.png"
+                  src="/media/kristen_profile.jpg"
                   alt="Dr. Kristen Woods"
                   roundedCircle
                 />
@@ -97,7 +97,7 @@ export default function Home() {
               <div className={styles.profileCard}>
                 <Image
                   className={styles.profilePicture}
-                  src="/media/photo_paul.png"
+                  src="/media/paul_profile.jpg"
                   alt="Dr. Paul Woods"
                   roundedCircle
                 />
