@@ -1,0 +1,18 @@
+.servicesRow {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    background-color: rgba(15, 24, 32, 0.5);
+}
+
+.imageCard {
+    margin-bottom: 20px;
+}
+
+.featureImage {
+    object-fit: cover;
+}
+
+.featureText {
+    max-width: 375px;
+}

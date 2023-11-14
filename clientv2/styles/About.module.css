@@ -1,0 +1,90 @@
+.wrapperDiv {
+    background-color: rgba(15, 24, 32, 0.5);
+}
+
+.bgVideo {
+    object-fit: cover;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.videoContainer {
+    max-height: 100vh;
+}
+
+.viewportHeader {
+    text-align: center;
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+.viewportHeader h1 {
+    margin-bottom: 3rem;
+}
+
+.heroText {
+    font-size: 6rem;
+    color: bisque;
+    display: inline-block;
+}
+
+.heroSubtext {
+    font-size: 1.3rem;
+    color: bisque;
+}
+
+.mainContent {
+    color: bisque;
+}
+
+.featureRow {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.featureImage {
+    width: 100%;
+    border-radius: 10px;
+    height: auto;
+    display: block;
+}
+
+.aboutText {
+    font-size: 1rem;
+    flex: 1;
+}
+
+.externalLink {
+    text-decoration: none;
+    color: rgb(184, 117, 193);
+    font-weight: 700;
+}
+
+.missionStatement {
+    color: bisque;
+    font-size: 1.5rem;
+    background-color: rgba(15, 24, 32, 0.8);
+}
+
+@media (max-width: 768px) {
+    .heroText {
+        font-size: 3rem;
+    }
+    
+    .aboutText {
+        padding-top: 1rem;
+        font-size: 1.3rem;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .missionStatement {
+        font-size: 1.2rem;
+    }
+}

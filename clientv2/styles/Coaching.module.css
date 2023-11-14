@@ -1,0 +1,38 @@
+.listParent {
+    list-style: none;
+    counter-reset: list;
+}
+
+.listItem {
+    position: relative;
+    counter-increment: list;
+    box-shadow: 0.1rem 0.1rem 1.5rem rgba(0, 0, 0, 0.3);
+	padding: 2rem 1rem 1rem;
+    border-radius: 0.25rem;
+    margin: 2rem auto;
+}
+
+.listHeader {
+    display: flex;
+    align-items: baseline;
+    margin: 0 0 1rem;
+}
+
+.listHeader::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    margin-right: 1rem;
+    width: 3rem;
+    height: 3rem;
+    content: counter(list);
+    padding: 1rem;
+    border-radius: 50%;
+    background-color: rgb(15,24,32);
+    color: bisque;
+}
+
+.listParagraph {
+    line-height: 1.6;
+}

@@ -1,0 +1,10 @@
+.blogHeader {
+    border-bottom: thin solid black;
+}
+
+@media screen and (max-width: 767px) {
+    .blogSideContent {
+        width: 100%;
+        padding-bottom: 1rem;
+    }
+}

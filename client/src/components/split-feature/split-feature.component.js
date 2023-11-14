@@ -5,7 +5,7 @@ import styles from "./split-feature.module.css";
 const ProfileSplitFeature = () => {
   return (
     <div className={styles["split-feature"]}>
-      <Container>
+      <Container fluid>
         <Row className={styles["profile-row"]}>
           <Col md={6} className="text-center">
             <div className={styles["profile-card"]}>

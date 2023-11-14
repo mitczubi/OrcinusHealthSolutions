@@ -1,0 +1,51 @@
+.listParent {
+    list-style: none;
+}
+
+.listItem + .listItem {
+    margin-top: 1rem;
+}
+
+.listItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgb(84,106,119);
+    color: rgb(234, 236, 228);
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 100%;
+	box-shadow: 0.25rem 0.25rem 0.75rem rgb(0 0 0 / 0.1);
+    font-size: 1.5rem;
+}
+
+.listItem::before {
+    counter-increment: list-item;
+    content: counter(list-item);
+    font-size: 3rem;
+    font-weight: 700;
+    width: 2em;
+    height: 2em;
+    background-color: rgb(15,24,32);
+    flex: 0 0 auto;
+    border-radius: 50%;
+    color: rgb(234, 236, 228);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.listItem:nth-child(even) {
+    background: rgb(234, 236, 228);
+    color: rgb(84,106,119)    
+}
+
+@media (max-width: 768px) {
+    .listItem {
+        font-size: 1.2rem;
+    }
+
+    .listItem::before {
+        font-size: 1.5rem;
+    }
+}

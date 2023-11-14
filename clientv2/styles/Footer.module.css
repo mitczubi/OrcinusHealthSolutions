@@ -1,0 +1,21 @@
+.footerCustom {
+    background-color: rgb(15,24,32);
+    color: beige;
+}
+
+.navCustomText {
+    color: beige;
+}
+
+.navCustomText:hover {
+    color: inherit;
+    text-shadow: 0 0 7px #fff000;
+}
+
+.borderBottom {
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* .footerCustom li {
+    text-decoration: none;
+} */
