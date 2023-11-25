@@ -1,7 +1,22 @@
+import { useState } from "react"
 import { Container, Row, Col } from "react-bootstrap"
 import styles from "@/styles/Coaching.module.css"
 
 export default function ExecutiveCoaching() {
+    const [drawerStates, setDrawerStates] = useState({
+        drawer1: false,
+        drawer2: false,
+        drawer3: false,
+        drawer4: false
+    })
+
+    const toggleDrawer = (drawerKey) => {
+        setDrawerStates((prevDrawerStates) => ({
+            ...prevDrawerStates,
+            [drawerKey]: !prevDrawerStates[drawerKey]
+        }))
+    }
+
     return (
         <>
             <Container className="my-5">
@@ -10,6 +25,7 @@ export default function ExecutiveCoaching() {
                         <h1>
                             Executive Coaching
                         </h1>
+                        
                         <p>
                             We are certified Business and Executive Coaches 
                             through FocalPoint Business Coaching.  
@@ -27,14 +43,17 @@ export default function ExecutiveCoaching() {
                 </Row>
                 <Row>
                     <Col md={{span: 10, offset: 1}}>
-                        <ol role="list" className={`p-0 ${styles.listParent}`} >
+                        <ol role="list" className={`p-0 ${styles.listParent}`}>
                             <li className={`${styles.listItem}`}>
                                 <h3 className={`${styles.listHeader}`}>Assessments</h3>
-                                <p className={`${styles.listParagraph}`}>
-                                    We administer and debrief a variety of assessments that will 
-                                    help you to understand yourself, members of your team, and 
-                                    your team dynamics to optimize communication and team performance.
-                                </p>
+                                <button onClick={() => toggleDrawer('drawer1')}>Open</button>
+                                {drawerStates.drawer1 && (
+                                    <p className={`${styles.listParagraph}`}>
+                                        We administer and debrief a variety of assessments that will 
+                                        help you to understand yourself, members of your team, and 
+                                        your team dynamics to optimize communication and team performance.
+                                    </p>
+                                )}
                             </li>
                             <li className={`${styles.listItem}`}>
                                 <h3 className={`${styles.listHeader}`}>Workshops</h3>
@@ -46,14 +65,15 @@ export default function ExecutiveCoaching() {
                                     group environment. Topics and content
                                     are customizable to your organization’s
                                     current challenges. Examples include:
-                                    <ul>
-                                        <li>Navigational Conversations</li>
-                                        <li>Effective Time Management</li>
-                                        <li>Strategic Planning</li>
-                                        <li>Effective Goal Setting</li>
-                                        <li>Building Effective Teams</li>
-                                    </ul>
+                                    
                                 </p>
+                                <ul>
+                                    <li>Navigational Conversations</li>
+                                    <li>Effective Time Management</li>
+                                    <li>Strategic Planning</li>
+                                    <li>Effective Goal Setting</li>
+                                    <li>Building Effective Teams</li>
+                                </ul>
                             </li>
                             <li className={`${styles.listItem}`}>
                                 <h3 className={`${styles.listHeader}`}>Longitudinal Cohort Programs</h3>

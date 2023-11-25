@@ -18,9 +18,6 @@ export default function Footer () {
                         <Nav.Item>
                             <Nav.Link className={styles.navCustomText} href="/blog">Blog</Nav.Link>
                         </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link className={styles.navCustomText} href="/news">News</Nav.Link>
-                        </Nav.Item>
                     </Nav>
                     <p className="py-2 text-center">&copy; {currentYear} Orcinus Health Solutions</p>
                 </Row>
