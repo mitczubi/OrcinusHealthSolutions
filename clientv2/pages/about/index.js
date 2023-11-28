@@ -96,7 +96,7 @@ export default function About() {
                                 <div className={`${styles.aboutText}`}>
                                     <p className={`text-left`}>
                                         Kristen Woods is a certified business and executive coach 
-                                        focused on supporting and elevating female physician leaders 
+                                        focused on supporting and elevating women physician leaders 
                                         and their allies as a path to addressing gender equity in 
                                         the C-suite, improving healthcare leadership and eliminating 
                                         moral distress in healthcare.

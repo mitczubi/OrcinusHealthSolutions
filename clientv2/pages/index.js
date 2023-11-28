@@ -79,7 +79,7 @@ export default function Home() {
                 />
                 <div className={styles.profileBlurb}>
                   <p>
-                    Kristen Woods MD MMM engages with female physician leaders 
+                    Kristen Woods MD MMM engages with women physician leaders 
                     and their allies as a path to address gender equity in 
                     healthcare leadership and to amplify physicians' voices in 
                     improving the delivery of healthcare while reducing moral 
