@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Container, Row, Col } from "react-bootstrap"
+import { FaChevronDown } from "react-icons/fa";
 import styles from "@/styles/Coaching.module.css"
 
 export default function ExecutiveCoaching() {
@@ -45,8 +46,12 @@ export default function ExecutiveCoaching() {
                     <Col md={{span: 10, offset: 1}}>
                         <ol role="list" className={`p-0 ${styles.listParent}`}>
                             <li className={`${styles.listItem}`}>
-                                <h3 className={`${styles.listHeader}`}>Assessments</h3>
-                                <button onClick={() => toggleDrawer('drawer1')}>Open</button>
+                                <h3 className={`${styles.listHeader}`}>
+                                    Assessments
+                                    <button className={`${styles.drawerButton}`} onClick={() => toggleDrawer('drawer1')}>
+                                        <FaChevronDown />
+                                    </button>
+                                </h3>
                                 {drawerStates.drawer1 && (
                                     <p className={`${styles.listParagraph}`}>
                                         We administer and debrief a variety of assessments that will 
@@ -56,58 +61,80 @@ export default function ExecutiveCoaching() {
                                 )}
                             </li>
                             <li className={`${styles.listItem}`}>
-                                <h3 className={`${styles.listHeader}`}>Workshops</h3>
-                                <p className={`${styles.listParagraph}`}>
-                                    We offer a variety of workshops
-                                    intended to drive individual and team
-                                    performance by teaching effective tools
-                                    and processes within a collaborative
-                                    group environment. Topics and content
-                                    are customizable to your organization’s
-                                    current challenges. Examples include:
-                                    
-                                </p>
-                                <ul>
-                                    <li>Navigational Conversations</li>
-                                    <li>Effective Time Management</li>
-                                    <li>Strategic Planning</li>
-                                    <li>Effective Goal Setting</li>
-                                    <li>Building Effective Teams</li>
-                                </ul>
+                                <h3 className={`${styles.listHeader}`}>
+                                    Workshops
+                                    <button className={`${styles.drawerButton}`} onClick={() => toggleDrawer('drawer2')}>
+                                        <FaChevronDown />
+                                    </button>
+                                </h3>
+                                {drawerStates.drawer2 && (
+                                    <div>
+                                        <p className={`${styles.listParagraph}`}>
+                                        We offer a variety of workshops
+                                        intended to drive individual and team
+                                        performance by teaching effective tools
+                                        and processes within a collaborative
+                                        group environment. Topics and content
+                                        are customizable to your organization’s
+                                        current challenges. Examples include:    
+                                        </p>
+                                        <ul>
+                                            <li>Navigational Conversations</li>
+                                            <li>Effective Time Management</li>
+                                            <li>Strategic Planning</li>
+                                            <li>Effective Goal Setting</li>
+                                            <li>Building Effective Teams</li>
+                                        </ul>
+                                    </div>
+                                )}
                             </li>
                             <li className={`${styles.listItem}`}>
-                                <h3 className={`${styles.listHeader}`}>Longitudinal Cohort Programs</h3>
-                                <p className={`${styles.listParagraph}`}>
-                                    The Executive Coaching Program is
-                                    a partnership between a coach and a
-                                    healthcare leader designed to create
-                                    a collaborative process that inspires
-                                    the leader to maximize her or his
-                                    personal and professional potential.
-                                    This program utilizes behavioral
-                                    assessments, as well as 360 degree
-                                    feedback, to formulate a plan that
-                                    builds upon professional skills in a
-                                    variety of areas.
-                                </p>
+                                <h3 className={`${styles.listHeader}`}>
+                                    Longitudinal Cohort Programs
+                                    <button className={`${styles.drawerButton}`} onClick={() => toggleDrawer('drawer3')}>
+                                        <FaChevronDown />
+                                    </button>
+                                </h3>
+                                {drawerStates.drawer3 && (
+                                    <p className={`${styles.listParagraph}`}>
+                                        The Executive Coaching Program is
+                                        a partnership between a coach and a
+                                        healthcare leader designed to create
+                                        a collaborative process that inspires
+                                        the leader to maximize her or his
+                                        personal and professional potential.
+                                        This program utilizes behavioral
+                                        assessments, as well as 360 degree
+                                        feedback, to formulate a plan that
+                                        builds upon professional skills in a
+                                        variety of areas.
+                                    </p>
+                                )}
                             </li>
                             <li className={`${styles.listItem}`}>
-                                <h3 className={`${styles.listHeader}`}>Executive Coaching</h3>
-                                <p className={`${styles.listParagraph}`}>
-                                    We believe that the development of
-                                    highly skilled physician leaders will bring
-                                    about the desired change to healthcare
-                                    delivery. To that end, we have taken
-                                    FocalPoint's executive training program
-                                    and contextualized this unique program
-                                    for the critical role that physicians fill in
-                                    healthcare leadership and
-                                    transformation. This group coaching
-                                    program serves as a glidepath to
-                                    optimizing the physician's leadership
-                                    skillset while simultaneously tackling the
-                                    real issues impacting leaders today.
-                                </p>
+                                <h3 className={`${styles.listHeader}`}>
+                                    Executive Coaching
+                                    <button className={`${styles.drawerButton}`} onClick={() => toggleDrawer('drawer4')}>
+                                        <FaChevronDown />
+                                    </button>
+                                </h3>
+                                {drawerStates.drawer4 && (
+                                    <p className={`${styles.listParagraph}`}>
+                                        We believe that the development of
+                                        highly skilled physician leaders will bring
+                                        about the desired change to healthcare
+                                        delivery. To that end, we have taken
+                                        FocalPoint's executive training program
+                                        and contextualized this unique program
+                                        for the critical role that physicians fill in
+                                        healthcare leadership and
+                                        transformation. This group coaching
+                                        program serves as a glidepath to
+                                        optimizing the physician's leadership
+                                        skillset while simultaneously tackling the
+                                        real issues impacting leaders today.
+                                    </p>
+                                )}
                             </li>
                         </ol>
                     </Col>
