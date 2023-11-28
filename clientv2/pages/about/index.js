@@ -5,8 +5,9 @@ export default function About() {
     return (
         <>
             <div className={`${styles.wrapperDiv}`}>
-                <video autoPlay muted loop className={styles.bgVideo}>
+                <video playsInline autoPlay muted loop className={styles.bgVideo}>
                     <source src="https://orcinus.s3.amazonaws.com/orcas.webm" type="video/webm" />
+                    <source src="https://orcinus.s3.amazonaws.com/orcas.mp4" type="video/mp4" />
                 </video>
                 <header className={styles.viewportHeader}>
                     <Container className={``}>

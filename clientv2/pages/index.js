@@ -47,9 +47,11 @@ export default function Home() {
 
   return (
     <>
-      <video playsInline autoPlay muted loop className={styles.bgVideo} style={{ filter: `blur(${blurAmount}px)` }}>
-        <source src="https://orcinus.s3.amazonaws.com/orcas.webm" type="video/webm" />
-      </video>
+      <div className={`${styles.videoContainer}`}>
+        <video playsInline autoPlay muted loop className={styles.bgVideo} style={{ filter: `blur(${blurAmount}px)` }}>
+          <source src="https://orcinus.s3.amazonaws.com/orcas.webm" type="video/webm" />
+        </video>
+      </div>
       <header className={styles.viewportHeader} style={{ background: backgroundColor }}>
         <Container>
           <h1 className="mb-0">

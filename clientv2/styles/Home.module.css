@@ -8,6 +8,10 @@
     z-index: -1;
 }
 
+.videoContainer {
+    background-image: url("https://orcinus.s3.amazonaws.com/orcas.webm");
+}
+
 .viewportHeader {
     position: relative;
     height: 100vh;
