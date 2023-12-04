@@ -50,6 +50,7 @@ export default function Home() {
       <div className={`${styles.videoContainer}`}>
         <video playsInline autoPlay muted loop className={styles.bgVideo} style={{ filter: `blur(${blurAmount}px)` }}>
           <source src="https://orcinus.s3.amazonaws.com/orcas.webm" type="video/webm" />
+          <source src="https://orcinus.s3.amazonaws.com/orcas.mp4" type="video/mp4"/>
         </video>
       </div>
       <header className={styles.viewportHeader} style={{ background: backgroundColor }}>
