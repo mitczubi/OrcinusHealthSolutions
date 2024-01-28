@@ -80,18 +80,18 @@ export default function Home() {
                 />
                 <div className={styles.profileBlurb}>
                   <p>
-                    Kristen Woods MD MMM engages with women physician leaders 
-                    and their allies as a path to address gender equity in 
-                    healthcare leadership and to amplify physicians' voices in 
-                    improving the delivery of healthcare while reducing moral 
-                    distress. She partners with healthcare leaders to advance 
-                    their leadership skills, optimize their teams’ performance, 
-                    and build cultures that attract and retain talent in order 
-                    to make their organizations thrive. A focus on personal 
-                    wellbeing is integrated to ensure success in all aspects 
-                    of a balanced life. She is a family physician with 
-                    extensive experience in population health, change management, 
-                    and medical group operations.
+                    Kristen engages with physician leaders who wish to
+                    enhance their executive skillset to become a trusted voice
+                    for improving the delivery of healthcare while reducing
+                    moral distress for healthcare workers and physicians. She
+                    partners with healthcare leaders to advance their leadership
+                    skills, optimize their teams’ performance and diversity, and
+                    build cultures that attract and retain talent in order to make
+                    their organizations thrive. A focus on personal wellbeing is
+                    integrated to ensure success in all aspects of a balanced life.
+                    She has 25 years in healthcare as a family physician and
+                    executive with extensive experience in population health,
+                    change management, and healthsystem operations.
                   </p>
                 </div>
               </div>

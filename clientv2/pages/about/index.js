@@ -95,17 +95,15 @@ export default function About() {
                             <Col md={6}>
                                 <div className={`${styles.aboutText}`}>
                                     <p className={`text-left`}>
-                                        Kristen Woods is a certified business and executive coach 
-                                        focused on supporting and elevating women physician leaders 
-                                        and their allies as a path to addressing gender equity in 
-                                        the C-suite, improving healthcare leadership and eliminating 
-                                        moral distress in healthcare.
+                                        Kristen Woods is a certified business and executive coach focused on physician leaders who wish to
+                                        enhance their executive skillset to become a trusted voice for improving the delivery of healthcare while reducing
+                                        moral distress for healthcare workers and physicians.
                                     </p>
                                     <p className={`text-left`}>
-                                        As a coach, Dr. Woods brings forward her experience as a leader
-                                        in population health and medical group operations.  She currently 
-                                        serves as the SVP of Network and Physician Experience for 
-                                        Southwestern Health Resources, one of three ACOs in the country 
+                                        As a coach, Dr. Woods brings forward her experience as a leader 
+                                        in population health and medical group operations. In her most 
+                                        recent corporate role, she served as the SVP of Network and Physician 
+                                        Experience for Southwestern Health Resources, one of three ACOs in the country 
                                         to earn the Leaders in Quality Excellence Award by the National 
                                         Association of Accountable Care Organizations in 2023. In addition, 
                                         SWHR clinically integrated network has generated more than $150 

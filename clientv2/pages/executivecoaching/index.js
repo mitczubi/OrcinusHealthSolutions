@@ -90,7 +90,7 @@ export default function ExecutiveCoaching() {
                             </li>
                             <li className={`${styles.listItem}`}>
                                 <h3 className={`${styles.listHeader}`}>
-                                    Longitudinal Cohort Programs
+                                    Executive Coaching
                                     <button className={`${styles.drawerButton}`} onClick={() => toggleDrawer('drawer3')}>
                                         <FaChevronDown />
                                     </button>
@@ -113,7 +113,7 @@ export default function ExecutiveCoaching() {
                             </li>
                             <li className={`${styles.listItem}`}>
                                 <h3 className={`${styles.listHeader}`}>
-                                    Executive Coaching
+                                    Longitudinal Cohort Programs
                                     <button className={`${styles.drawerButton}`} onClick={() => toggleDrawer('drawer4')}>
                                         <FaChevronDown />
                                     </button>
