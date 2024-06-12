@@ -15,14 +15,13 @@ export default function Services () {
                         Executive Coaching
                         </h3>
                         <p className={`mx-auto ${styles.featureText}`}>
-                        We are certified FocalPoint Business and Executive coaches. 
-                        Through our extensive experience as physicians, healthcare 
-                        leaders and executives we merge FocalPoint coaching skills 
-                        and resources with deep industry subject matter expertise 
-                        to work with healthcare leaders in growing their skills to 
-                        become even more effective in bringing desperately needed 
-                        changes to their organizations and the entire world of 
-                        healthcare.
+                        Discover the unparalleled advantage of partnering with certified FocalPoint Business and
+                        Executive Coaches. Leveraging our extensive backgrounds as physicians, healthcare leaders,
+                        and executives, we blend FocalPoint&#39;s proven coaching methodologies with our profound
+                        industry expertise. Our tailored coaching services empower healthcare leaders to enhance their
+                        skills, drive transformative changes, and make a significant impact on their organizations and
+                        the entire healthcare landscape. Transform your leadership and ignite the change you envision
+                        with our expert guidance.
                         </p>
                     </div>
                 </Col>
@@ -36,11 +35,11 @@ export default function Services () {
                         Consulting
                         </h3>
                         <p className={`mx-auto ${styles.featureText}`}>
-                        As physicians with a combined 4 decades of clinical experience, 
-                        and over two decades of senior executive experience, we offer 
-                        a unique skill set and perspective to companies and 
-                        organizations grappling with many of the thorny challenges 
-                        facing healthcare.
+                        With over four decades of clinical expertise and more than two decades in senior executive
+                        roles, we bring a unique and invaluable skill set to healthcare consulting. Our deep
+                        understanding of the industry allows us to provide innovative solutions and strategic insights to
+                        companies and organizations navigating the complex challenges in healthcare. Partner with us
+                        to leverage our unparalleled experience and drive impactful change in your organization.
                         </p>
                     </div>
                 </Col>

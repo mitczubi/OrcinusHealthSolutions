@@ -2,11 +2,34 @@ import { useEffect, useState } from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import Services from "@/components/services.js";
 import styles from "../styles/Home.module.css";
+import { getProfiles } from "@/utils/get_profile";
 
-export default function Home() {
+export async function getStaticProps() {
+  const profiles = await getProfiles();
+  return {
+    props: {
+      profiles,
+    },
+    revalidate: 10,
+  };
+}
+
+function findProfileByName(profiles, name) {
+  for (const profile of profiles) {
+    if (profile.name === name) {
+      return profile;
+    }
+  }
+  return null;
+}
+
+export default function Home({ profiles }) {
   const [scrollY, setScrollY] = useState(0);
 
   const [scrollPosition, setScrollPosition] = useState(0);
+
+  const kristen = findProfileByName(profiles, 'Kristen')
+  const paul = findProfileByName(profiles, 'Paul')
 
   useEffect(() => {
     const handleBoxScroll = () => {
@@ -24,7 +47,6 @@ export default function Home() {
 
   const slideLeft = scrollPosition > 175;
   const slideRight = scrollPosition < 100;
-
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,7 +66,6 @@ export default function Home() {
   const backgroundColor = `rgba(67, 84, 105, ${backgroundOpacity}`;
   const blurAmount = Math.min(scrollY / (typeof window !== 'undefined' ? window.innerHeight : 0), 0.8) * 10;
   
-
   return (
     <>
       <div className={`${styles.videoContainer}`}>
@@ -74,24 +95,13 @@ export default function Home() {
               <div className={styles.profileCard}>
                 <Image
                   className={styles.profilePicture}
-                  src="/media/kristen_profile.jpg"
+                  src={kristen.homepageUrl}
                   alt="Dr. Kristen Woods"
                   roundedCircle
                 />
                 <div className={styles.profileBlurb}>
                   <p>
-                    Kristen engages with physician leaders who wish to
-                    enhance their executive skillset to become a trusted voice
-                    for improving the delivery of healthcare while reducing
-                    moral distress for healthcare workers and physicians. She
-                    partners with healthcare leaders to advance their leadership
-                    skills, optimize their teams’ performance and diversity, and
-                    build cultures that attract and retain talent in order to make
-                    their organizations thrive. A focus on personal wellbeing is
-                    integrated to ensure success in all aspects of a balanced life.
-                    She has 25 years in healthcare as a family physician and
-                    executive with extensive experience in population health,
-                    change management, and healthsystem operations.
+                    {kristen.biography}
                   </p>
                 </div>
               </div>
@@ -100,19 +110,13 @@ export default function Home() {
               <div className={styles.profileCard}>
                 <Image
                   className={styles.profilePicture}
-                  src="/media/paul_profile.jpg"
+                  src={paul.homepageUrl}
                   alt="Dr. Paul Woods"
                   roundedCircle
                 />
                 <div className={styles.profileBlurb}>
                   <p>
-                    Paul Woods MD MS has devoted his career to changing Healthcare 
-                    for the betterment of all, from frontline care through clinical 
-                    and executive leadership to advocacy on the policy and payment 
-                    front. He is a family physician, senior healthcare executive, 
-                    and executive coach committed to leveraging his 37 years of 
-                    experience to make healthcare better, safer, more people-centered, 
-                    and equitable.
+                    {paul.biography}
                   </p>
                 </div>
               </div>

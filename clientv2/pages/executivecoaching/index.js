@@ -28,14 +28,13 @@ export default function ExecutiveCoaching() {
                         </h1>
                         
                         <p>
-                            We are certified Business and Executive Coaches 
-                            through FocalPoint Business Coaching.  
-                            Through FocalPoint’s exceptional training, resources 
-                            and support, we are able to work with healthcare 
-                            and other executives to bring their skills, 
-                            capabilities, and worklife balance to the level 
-                            they wish them to be, and in so doing lift their 
-                            organizations to new heights of achievement.
+                        As certified Business and Executive Coaches through FocalPoint Coaching and Training, we
+                        bring compassion and expertise to our work with healthcare and other executives. With
+                        FocalPoint’s exceptional training, resources, and support, we help leaders enhance their skills,
+                        capabilities, and work-life balance, empowering them to achieve their personal and professional
+                        goals. Together, we elevate not just individual leaders but entire organizations, guiding them to
+                        reach new heights of success and fulfillment. Join us to transform your leadership journey and
+                        make a lasting impact on your organization.
                         </p>
                         <p>
                             We provide support to leaders and organizations through an array of options:
@@ -54,9 +53,10 @@ export default function ExecutiveCoaching() {
                                 </h3>
                                 {drawerStates.drawer1 && (
                                     <p className={`${styles.listParagraph}`}>
-                                        We administer and debrief a variety of assessments that will 
-                                        help you to understand yourself, members of your team, and 
-                                        your team dynamics to optimize communication and team performance.
+                                        Begin your journey to unlocking your full potential with us. We offer a range of assessments to
+                                        help you gain insights into yourself, your team members, and your team dynamics. This
+                                        foundational step is essential for improving communication and boosting overall team
+                                        performance.
                                     </p>
                                 )}
                             </li>
@@ -70,20 +70,16 @@ export default function ExecutiveCoaching() {
                                 {drawerStates.drawer2 && (
                                     <div>
                                         <p className={`${styles.listParagraph}`}>
-                                        We offer a variety of workshops
-                                        intended to drive individual and team
-                                        performance by teaching effective tools
-                                        and processes within a collaborative
-                                        group environment. Topics and content
-                                        are customizable to your organization’s
-                                        current challenges. Examples include:    
+                                        We provide a range of workshops designed to enhance individual and team performance by
+                                        teaching effective tools and processes in a collaborative setting. Our topics and content are
+                                        customizable to address your organization’s specific challenges. Examples include:   
                                         </p>
                                         <ul>
-                                            <li>Navigational Conversations</li>
+                                            <li>Trust Edge Framework</li>
+                                            <li>Navigational Conversations&#174;</li>
+                                            <li>Communications Breakthrough</li>
                                             <li>Effective Time Management</li>
                                             <li>Strategic Planning</li>
-                                            <li>Effective Goal Setting</li>
-                                            <li>Building Effective Teams</li>
                                         </ul>
                                     </div>
                                 )}
@@ -97,17 +93,12 @@ export default function ExecutiveCoaching() {
                                 </h3>
                                 {drawerStates.drawer3 && (
                                     <p className={`${styles.listParagraph}`}>
-                                        The Executive Coaching Program is
-                                        a partnership between a coach and a
-                                        healthcare leader designed to create
-                                        a collaborative process that inspires
-                                        the leader to maximize her or his
-                                        personal and professional potential.
-                                        This program utilizes behavioral
-                                        assessments, as well as 360 degree
-                                        feedback, to formulate a plan that
-                                        builds upon professional skills in a
-                                        variety of areas.
+                                        Our Executive Coaching Program is a transformative partnership between coach and healthcare
+                                        leader, designed to ignite your journey towards personal and professional excellence.
+                                        Leveraging behavioral assessments and comprehensive 360-degree feedback, we work
+                                        together to define your goals, chart your course, and measure progress as you navigate your
+                                        path to success. Experience the freedom to customize your growth and take your leadership to
+                                        extraordinary heights with our Executive Coaching Program.
                                     </p>
                                 )}
                             </li>
@@ -120,19 +111,12 @@ export default function ExecutiveCoaching() {
                                 </h3>
                                 {drawerStates.drawer4 && (
                                     <p className={`${styles.listParagraph}`}>
-                                        We believe that the development of
-                                        highly skilled physician leaders will bring
-                                        about the desired change to healthcare
-                                        delivery. To that end, we have taken
-                                        FocalPoint's executive training program
-                                        and contextualized this unique program
-                                        for the critical role that physicians fill in
-                                        healthcare leadership and
-                                        transformation. This group coaching
-                                        program serves as a glidepath to
-                                        optimizing the physician's leadership
-                                        skillset while simultaneously tackling the
-                                        real issues impacting leaders today.
+                                        At the heart of our mission is the belief that nurturing highly skilled physician leaders is
+                                        paramount to revolutionizing healthcare delivery. That is why we have meticulously tailored
+                                        FocalPoint&#39;s executive training program to meet the distinct needs of physicians in leadership
+                                        roles within healthcare. Our customizable group coaching program acts as a strategic pathway,
+                                        guiding physicians to optimize their leadership capabilities while directly addressing the pressing
+                                        challenges faced by leaders in the field today.
                                     </p>
                                 )}
                             </li>

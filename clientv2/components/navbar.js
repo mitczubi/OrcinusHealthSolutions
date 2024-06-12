@@ -25,7 +25,7 @@ export default function Navigation () {
                                 <NavDropdown.Item className={`${styles.navbarCustomText}`} href="/consulting">Consulting</NavDropdown.Item>
                         </NavDropdown>
                         <Nav.Item>
-                            <Nav.Link className={`${styles.navbarCustomText}`} href="/blog">Blog</Nav.Link>
+                            <Nav.Link className={`${styles.navbarCustomText}`} href="/blog">Fun Stuff</Nav.Link>
                         </Nav.Item>
                     </Nav>
                 </Navbar.Collapse>
