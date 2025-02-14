@@ -24,7 +24,6 @@ function findProfileByName(profiles, name) {
 export default function About({ profiles }) {
 
     const kristen = findProfileByName(profiles, 'Kristen')
-    const paul = findProfileByName(profiles, 'Paul')
 
     return (
         <>
@@ -128,31 +127,6 @@ export default function About({ profiles }) {
                                             target="_blank">
                                                 LinkedIn
                                             </a>.
-                                    </p>
-                                </div>
-                            </Col>
-                        </Row>
-                        <hr style={{height: '2px', backgroundColor: 'bisque'}}/>
-                        <Row className={`mt-5 pb-5 ${styles.featureRow}`}>
-                            <Col md={6} className={`text-center`}>
-                                    <Image 
-                                        className={`img-fluid ${styles.featureImage}`}
-                                        src={paul.aboutpageUrl}
-                                        alt="Dr. Paul Woods"
-                                    />
-                            </Col>
-                            <Col md={6}>
-                                <div className={`${styles.aboutText} flex-grow-1`}>
-                                    <p style={{ whiteSpace: 'pre-line'}} className={`text-left`}>
-                                        {paul.aboutBiography}
-                                    <br/>   
-                                    You can find Paul on&nbsp;
-                                    <a 
-                                        className={`${styles.externalLink}`} 
-                                        href="http://linkedin.com/in/paul-woods-md-ms-150b6413" 
-                                        target="_blank">
-                                            LinkedIn
-                                    </a>. 
                                     </p>
                                 </div>
                             </Col>

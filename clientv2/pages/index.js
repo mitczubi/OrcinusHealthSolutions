@@ -106,23 +106,7 @@ export default function Home({ profiles }) {
                 </div>
               </div>
             </Col>
-            <Col>
-              <div className={styles.profileCard}>
-                <Image
-                  className={styles.profilePicture}
-                  src={paul.homepageUrl}
-                  alt="Dr. Paul Woods"
-                  roundedCircle
-                />
-                <div className={styles.profileBlurb}>
-                  <p>
-                    {paul.biography}
-                  </p>
-                </div>
-              </div>
-            </Col>
           </Row>
-
           <Services />
         </Container>
       </main>
